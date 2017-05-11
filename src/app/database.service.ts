@@ -42,14 +42,26 @@ export class DatabaseService {
   }
 
   getThingById(thingId: string) {
-    return this.db.object('/things'+thingId)
+    return this.db.object('/things/'+thingId)
   }
 
   getBoxById(boxId: string) {
-    return this.db.object('/boxes'+boxId)
+    return this.db.object('/boxes/'+boxId)
   }
 
   getRoomById(roomId: string) {
-    return this.db.object('/rooms'+roomId)
+    return this.db.object('/rooms/'+roomId)
+  }
+
+  findBoxes(box) {
+    if (box) return this.getBoxById(box)
+  }
+
+  findRooms(room) {
+    if (room) return this.getRoomById(room)
+  }
+
+  findThings(thing) {
+    if (thing) return this.getThingById(thing)
   }
 }

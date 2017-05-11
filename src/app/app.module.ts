@@ -12,6 +12,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { DisplayComponent } from './display/display.component';
 import { CreateFormComponent } from './create-form/create-form.component';
+import { EditFormComponent } from './edit-form/edit-form.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -24,7 +25,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     DisplayComponent,
-    CreateFormComponent
+    CreateFormComponent,
+    EditFormComponent
   ],
   imports: [
     BrowserModule,

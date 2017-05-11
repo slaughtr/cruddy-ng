@@ -56,22 +56,22 @@
 
   <div class="formSection">
     <label for="thingForBox">Thing(s) in box</label>
-    <select name="thingForBox">
+    <select #thingForBox name="thingForBox">
       <option *ngFor="let thing of things | async" [value]="thing.$key">{{thing.name}}</option>
     </select>
     <br>
      <br>
-     <a (click)="addThingToBox(thingForBox.value);">Add Thing To Box</a>
+     <button (click)="addThingToBox(thingForBox.value);">Add Thing To Box</button>
  </div>
 
   <div class="formSection">
     <label>Room(s) box goes in:</label>
-    <select name="roomForBox">
+    <select #roomForBox name="roomForBox">
       <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
     </select>
     <br>
     <br>
-       <a (click)="addRoomToBox(roomForBox.value);">Add Room To Box</a>
+       <button (click)="addRoomToBox(roomForBox.value);">Add Room To Box</button>
   </div>
 
   <button (click)="addNewBox(newBoxName.value)">Add New Box</button>
@@ -89,22 +89,22 @@
 
   <div class="formSection">
     <label for="thingForRoom">Thing(s) in room</label>
-    <select name="thingForRoom">
+    <select #thingForRoom name="thingForRoom">
       <option *ngFor="let thing of things | async" [value]="thing.$key">{{thing.name}}</option>
     </select>
     <br>
      <br>
-     <a (click)="addThingToRoom(thingForRoom.value);">Add Thing to Room</a>
+     <button (click)="addThingToRoom(thingForRoom.value);">Add Thing to Room</button>
  </div>
 
   <div class="formSection">
     <label>Box(es) for this room:</label>
-    <select name="boxForRoom">
+    <select #boxForRoom7 name="boxForRoom">
       <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
     </select>
     <br>
     <br>
-       <a (click)="addBoxToRoom(boxForRoom.value);">Add Box To Room</a>
+       <button (click)="addBoxToRoom(boxForRoom.value);">Add Box To Room</button>
   </div>
 
   <button (click)="addNewRoom(newRoomName.value)">Add New Room</button>

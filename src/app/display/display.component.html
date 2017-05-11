@@ -1,11 +1,51 @@
 <ul class="thingsUL">
-  <li *ngFor="let thing of things | async">{{thing.name}} <ul><li>{{thing.size}}</li></ul></li>
+  <li *ngFor="let thing of things | async">
+    {{thing.name}}
+    <ul>
+      <li>
+        Size: {{thing.size}}
+      </li>
+    </ul>
+    <ul>
+      <li>
+        Room: {{(this.dbService.findRooms(thing.room) | async)?.name}}
+      </li>
+    </ul>
+    <ul>
+      <ol>
+        Box: {{(this.dbService.findBoxes(thing.box) | async)?.name}}
+      </ol>
+    </ul>
+  </li>
 </ul>
 
 <ul class="boxesUL">
-  <li *ngFor="let box of boxes | async">{{box.name}}</li>
+  <li *ngFor="let box of boxes | async">
+    {{box.name}}
+    <ul>
+      <li *ngFor="let room of box.rooms">
+        Room: {{(this.dbService.findRooms(room) | async)?.name}}
+      </li>
+    </ul>
+    <ul>
+      <ol *ngFor="let thing of box.things">
+        Thing: {{(this.dbService.findThings(thing) | async)?.name}}
+      </ol>
+    </ul>
+  </li>
 </ul>
 
 <ul class="roomsUL">
-  <li *ngFor="let room of rooms | async">{{room.name}}</li>
+  <li *ngFor="let room of rooms | async">{{room.name}}
+    <ul>
+      <li *ngFor="let box of room.boxes">
+        Box: {{(this.dbService.findBoxes(box) | async)?.name}}
+      </li>
+    </ul>
+    <ul>
+      <ol *ngFor="let thing of room.things">
+        Thing: {{(this.dbService.findThings(thing) | async)?.name}}
+      </ol>
+    </ul>
+  </li>
 </ul>
