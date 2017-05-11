@@ -1,0 +1,66 @@
+{
+  "things" : [{
+    "name" : "Books",
+    "size" : "large",
+    "box" : "",
+    "room" : ""
+    }, {
+    "name" : "Video games",
+    "size" : "medium",
+    "box" : "",
+    "room" : ""
+    }, {
+    "name" : "Toys",
+    "size" : "small",
+    "box" : "",
+    "room" : ""
+    }, {
+    "name" : "Clothes",
+    "size" : "large",
+    "box" : "",
+    "room" : ""
+    }, {
+    "name" : "Electronics",
+    "size" : "medium",
+    "box" : "",
+    "room" : ""
+    } ],
+  "boxes" : [{
+    "name" : "Books",
+    "things" : "",
+    "rooms" : ""
+    }, {
+    "name" : "Video games",
+    "things" : "",
+    "rooms" : ""
+    }, {
+    "name" : "Toys",
+    "things" : "",
+    "rooms" : ""
+    }, {
+    "name" : "Clothes",
+    "things" : "",
+    "rooms" : ""
+    }, {
+    "name" : "Electronics",
+    "things" : "",
+    "rooms" : ""
+    } ],
+  "rooms" : [{
+    "name" : "Living Room",
+    "things" : "",
+    "boxes" : ""
+    }, {
+    "name" : "Bedroom",
+    "things" : "",
+    "boxes" : ""
+    }, {
+    "name" : "Kitchen",
+    "things" : "",
+    "boxes" : ""
+    }, {
+    "name" : "Bathroom",
+    "things" : "",
+    "boxes" : ""
+    } ]
+}

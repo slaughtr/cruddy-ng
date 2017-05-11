@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 It is intended to gather all CRUD/Firebase related functionality for Angular 2 into a barebones project, for easy reference.
 
+I will also include many-to-many and one-to-many relationships in Firebase. This was easy in Ember, but does not seem as easy in Angular.
+
 May also feature CSS grid layout functionality and Firebase/Google auth.
 
 ## Development server
@@ -31,13 +33,16 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+For info on angularfire2, read the [AngularFire2 Github](https://github.com/angular/angularfire2)
+
 ## TODO
-+ Populate datas.json
++ ~~Populate datas.json~~
 + Integrate Firebase database
 + Read functionality
 + Create functionality
 + Update functionality
 + Delete functionality
-+ CSS grid
 + Many-to-many relationship in Firebase
++ CSS grid
 + Firebase auth
++ Dynamic routing?
