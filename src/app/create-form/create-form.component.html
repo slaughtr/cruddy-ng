@@ -1,20 +1,28 @@
 
-    <h3>Add New Thing</h3>
 
-        <label>Thing name:</label>
-        <br>
-        <input #newThingName>
+<h3>Add New Thing</h3>
 
+<div class="formSection">
+  <label>Thing name:</label>
+  <br>
+  <input #newThingName>
+  <br>
+</div>
 
-      <label>
-      <select>
-        <option>Default option no value</option>
-        <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
-      </select>
+<div class="formSection">
+  <label>Box thing goes in:</label>
+    <select>
+      <option>Default option no value</option>
+      <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
+    </select>
+    <br>
+</div>
 
-
-        <label>Room thing goes in:</label>
-        <select>
-          <option>Default option no value</option>
-          <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
-        </select>
+  <div class="formSection">
+    <label>Room thing goes in:</label>
+    <select>
+      <option>Default option no value</option>
+      <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
+    </select>
+    <br>
+  </div>
