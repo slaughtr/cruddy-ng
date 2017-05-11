@@ -1,3 +1,20 @@
-<p>
-  create-form works!
-</p>
+
+    <h3>Add New Thing</h3>
+
+        <label>Thing name:</label>
+        <br>
+        <input #newThingName>
+
+
+      <label>
+      <select>
+        <option>Default option no value</option>
+        <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
+      </select>
+
+
+        <label>Room thing goes in:</label>
+        <select>
+          <option>Default option no value</option>
+          <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
+        </select>
