@@ -1,11 +1,11 @@
-<ul>
-  <li *ngFor="let thing of things | async">{{thing.name}}</li>
+<ul class="thingsUL">
+  <li *ngFor="let thing of things | async">{{thing.name}} <ul><li>{{thing.size}}</li></ul></li>
 </ul>
 
-<ul>
+<ul class="boxesUL">
   <li *ngFor="let box of boxes | async">{{box.name}}</li>
 </ul>
 
-<ul>
+<ul class="roomsUL">
   <li *ngFor="let room of rooms | async">{{room.name}}</li>
 </ul>

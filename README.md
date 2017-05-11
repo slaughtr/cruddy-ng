@@ -37,8 +37,8 @@ For info on angularfire2, read the [AngularFire2 Github](https://github.com/angu
 
 ## TODO
 + ~~Populate datas.json~~
-+ Integrate Firebase database
-+ Read functionality
++ ~~Integrate Firebase database~~
++ ~~Read functionality~~
 + Create functionality
 + Update functionality
 + Delete functionality
