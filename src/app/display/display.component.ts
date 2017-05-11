@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { DatabaseService } from '../database.service'
 
@@ -9,6 +9,22 @@ import { DatabaseService } from '../database.service'
 })
 
 export class DisplayComponent implements OnInit {
+  @Output() editThingSender = new EventEmitter()
+  @Output() editBoxSender = new EventEmitter()
+  @Output() editRoomSender = new EventEmitter()
+
+  editThing(thingToEdit: Thing) {
+    this.editThingSender.emit(thingToEdit)
+  }
+
+  editBox(boxToEdit: Box) {
+    this.editBoxSender.emit(boxToEdit)
+  }
+
+  editRoom(roomToEdit: Room) {
+    this.editRoomSender.emit(roomToEdit)
+  }
+
   things: FirebaseListObservable<any[]>
   rooms: FirebaseListObservable<any[]>
   boxes: FirebaseListObservable<any[]>

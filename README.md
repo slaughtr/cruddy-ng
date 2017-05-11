@@ -42,7 +42,7 @@ For info on angularfire2, read the [AngularFire2 Github](https://github.com/angu
 + ~~Create functionality~~
 + Update functionality
 + Delete functionality
-+ Many-to-many relationship in Firebase
++ ~~Many-to-many relationship in Firebase~~
 + CSS grid
 + Firebase auth
 + Dynamic routing?

@@ -19,6 +19,7 @@ export class CreateFormComponent implements OnInit {
 
   whichForm: string = ''
 
+
   newThingsForBox: string[] = []
   newRoomsForBox: string[] = []
   newThingsForRoom: string[] = []
