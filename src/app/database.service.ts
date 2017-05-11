@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database'
 
+import { Thing } from './thing.model'
+import { Box } from './box.model'
+import { Room } from './room.model'
+
 @Injectable()
 export class DatabaseService {
   things: FirebaseListObservable<any[]>
@@ -11,6 +15,18 @@ export class DatabaseService {
     this.things = db.list('/things')
     this.boxes = db.list('/boxes')
     this.rooms = db.list('/rooms')
+  }
+
+  addThing(newThing: Thing) {
+    this.things.push(newThing)
+  }
+
+  addBox(newBox: Box) {
+    this.boxes.push(newBox)
+  }
+
+  addRoom(newRoom: Room) {
+    this.rooms.push(newRoom)
   }
 
   getThings()  {

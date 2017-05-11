@@ -1,28 +1,111 @@
+<button (click)="whichForm = 'thing'">New Thing</button>
+<br>
+<button (click)="whichForm = 'box'">New Box</button>
+<br>
+<button (click)="whichForm = 'room';">New Room</button>
+<br><br>
 
+<div *ngIf="whichForm === 'thing'">
+  <h3>Add New Thing</h3>
 
-<h3>Add New Thing</h3>
-
-<div class="formSection">
-  <label>Thing name:</label>
-  <br>
-  <input #newThingName>
-  <br>
-</div>
-
-<div class="formSection">
-  <label>Box thing goes in:</label>
-    <select>
-      <option>Default option no value</option>
-      <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
-    </select>
+  <div class="formSection">
+    <label>Thing name:</label>
     <br>
-</div>
+    <input #newThingName>
+    <br>
+  </div>
+
+  <div class="formSection">
+    <label>Size of thing:</label>
+      <select #newThingSize name="newThingSize">
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <br>
+  </div>
+
+  <div class="formSection">
+    <label>Box thing goes in:</label>
+      <select #newThingBox name="newThingBox">
+        <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
+      </select>
+      <br>
+  </div>
 
   <div class="formSection">
     <label>Room thing goes in:</label>
-    <select>
-      <option>Default option no value</option>
+    <select #newThingRoom name="newThingRoom">
       <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
     </select>
     <br>
   </div>
+
+  <button (click)="addNewThing(newThingName.value, newThingSize.value, newThingBox.value, newThingRoom.value)">Add new thing</button>
+</div>
+
+<div *ngIf="whichForm === 'box'">
+  <h3>Add New Box</h3>
+
+  <div class="formSection">
+    <label>Box name:</label>
+    <br>
+    <input #newBoxName>
+    <br>
+  </div>
+
+  <div class="formSection">
+    <label for="thingForBox">Thing(s) in box</label>
+    <select name="thingForBox">
+      <option *ngFor="let thing of things | async" [value]="thing.$key">{{thing.name}}</option>
+    </select>
+    <br>
+     <br>
+     <a (click)="addThingToBox(thingForBox.value);">Add Thing To Box</a>
+ </div>
+
+  <div class="formSection">
+    <label>Room(s) box goes in:</label>
+    <select name="roomForBox">
+      <option *ngFor="let room of rooms | async" [value]="room.$key">{{room.name}}</option>
+    </select>
+    <br>
+    <br>
+       <a (click)="addRoomToBox(roomForBox.value);">Add Room To Box</a>
+  </div>
+
+  <button (click)="addNewBox(newBoxName.value)">Add New Box</button>
+</div>
+
+<div *ngIf="whichForm === 'room'">
+  <h3>Add New Room</h3>
+
+  <div class="formSection">
+    <label>Room name:</label>
+    <br>
+    <input #newRoomName>
+    <br>
+  </div>
+
+  <div class="formSection">
+    <label for="thingForRoom">Thing(s) in room</label>
+    <select name="thingForRoom">
+      <option *ngFor="let thing of things | async" [value]="thing.$key">{{thing.name}}</option>
+    </select>
+    <br>
+     <br>
+     <a (click)="addThingToRoom(thingForRoom.value);">Add Thing to Room</a>
+ </div>
+
+  <div class="formSection">
+    <label>Box(es) for this room:</label>
+    <select name="boxForRoom">
+      <option *ngFor="let box of boxes | async" [value]="box.$key">{{box.name}}</option>
+    </select>
+    <br>
+    <br>
+       <a (click)="addBoxToRoom(boxForRoom.value);">Add Box To Room</a>
+  </div>
+
+  <button (click)="addNewRoom(newRoomName.value)">Add New Room</button>
+</div>

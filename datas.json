@@ -27,40 +27,40 @@
     } ],
   "boxes" : [{
     "name" : "Books",
-    "things" : "",
-    "rooms" : ""
+    "things" : [],
+    "rooms" : []
     }, {
     "name" : "Video games",
-    "things" : "",
-    "rooms" : ""
+    "things" : [],
+    "rooms" : []
     }, {
     "name" : "Toys",
-    "things" : "",
-    "rooms" : ""
+    "things" : [],
+    "rooms" : []
     }, {
     "name" : "Clothes",
-    "things" : "",
-    "rooms" : ""
+    "things" : [],
+    "rooms" : []
     }, {
     "name" : "Electronics",
-    "things" : "",
-    "rooms" : ""
+    "things" : [],
+    "rooms" : []
     } ],
   "rooms" : [{
     "name" : "Living Room",
-    "things" : "",
-    "boxes" : ""
+    "things" : [],
+    "boxes" : []
     }, {
     "name" : "Bedroom",
-    "things" : "",
-    "boxes" : ""
+    "things" : [],
+    "boxes" : []
     }, {
     "name" : "Kitchen",
-    "things" : "",
-    "boxes" : ""
+    "things" : [],
+    "boxes" : []
     }, {
     "name" : "Bathroom",
-    "things" : "",
-    "boxes" : ""
+    "things" : [],
+    "boxes" : []
     } ]
 }
