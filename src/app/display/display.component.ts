@@ -9,21 +9,21 @@ import { DatabaseService } from '../database.service'
 })
 
 export class DisplayComponent implements OnInit {
-  @Output() editThingSender = new EventEmitter()
-  @Output() editBoxSender = new EventEmitter()
-  @Output() editRoomSender = new EventEmitter()
-
-  editThing(thingToEdit: Thing) {
-    this.editThingSender.emit(thingToEdit)
-  }
-
-  editBox(boxToEdit: Box) {
-    this.editBoxSender.emit(boxToEdit)
-  }
-
-  editRoom(roomToEdit: Room) {
-    this.editRoomSender.emit(roomToEdit)
-  }
+  // @Output() editThingSender = new EventEmitter()
+  // @Output() editBoxSender = new EventEmitter()
+  // @Output() editRoomSender = new EventEmitter()
+  //
+  // editThing(thingToEdit: Thing) {
+  //   this.editThingSender.emit(thingToEdit)
+  // }
+  //
+  // editBox(boxToEdit: Box) {
+  //   this.editBoxSender.emit(boxToEdit)
+  // }
+  //
+  // editRoom(roomToEdit: Room) {
+  //   this.editRoomSender.emit(roomToEdit)
+  // }
 
   things: FirebaseListObservable<any[]>
   rooms: FirebaseListObservable<any[]>

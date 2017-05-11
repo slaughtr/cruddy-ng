@@ -19,7 +19,6 @@ export class EditFormComponent implements OnInit {
   }
 
   getThing() {
-    this.dbService.getThingById()
   }
 
 }
